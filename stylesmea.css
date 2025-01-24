@@ -50,17 +50,39 @@ h1 {
 
 /* Menu alkaa tästä*/
 
-.juomat {
-    background-color: #f4ead5;
+.menu {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    display: flex;
+}
+
+
+/* .juomat {
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin:20px;
+    margin:20px auto;
     font-size: 18px;
 }
 
-.juomat button {
+.text  {
+    flex: 1;
+    max-width: 45%;
+}
+
+.image {
+    display: flex;
+    flex: 1;
+    max-width: 45%;
+    margin: 0;
+}
+
+.tutustu {
     margin-top: 20px;
     background-color: #E1CDA8;
     border: none;
@@ -68,12 +90,57 @@ h1 {
     border-radius: 5px;
 }
 
-.image {
+.makeiset {
+    background-color: #E9EDC9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px auto;
+    font-size: 18px;
+}
+
+.text2  {
     flex: 1;
     max-width: 45%;
 }
 
-.text {
+.image {
+    display: flex;
     flex: 1;
     max-width: 45%;
+    margin: 0;
 }
+
+.suolaiset {
+    background-color: #E2CCB6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px auto;
+    font-size: 18px;
+} */
+
+/* .Kakut {
+    background-color: #FCF4E2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px auto;
+    font-size: 18px;
+}
+
+.Brunssi {
+    background-color: #E9EDC9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px auto;
+    font-size: 18px;
+} */
+
+
+
