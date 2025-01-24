@@ -13,10 +13,39 @@ body {
 
 header {
     background-image: url(images/IMG_1148.jpg);
+    background-size: cover;
     position: relative;
-    width: 1200px;
+    width: 1280px;
     height: 1028px;
     background-repeat: no-repeat; /* kuva ei toistu, pysyy yhtenä*/
+}
+
+
+.container {
+    display: flex;
+    width: 1239px;
+    height: auto;
+}
+
+.navbar-brand img {
+    width: 208px;
+    height: auto;
+}
+
+.collapse {
+    font-family: Inria Serif;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+}
+
+/*ei käytössä*/
+.otsikot {
+    font-family: Inria Serif;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    ppadding: 10px 15%; */ /* tällä paddingilla sain siirrettyä enemmän keskelle */ 
 }
 
 h1 {
@@ -25,27 +54,16 @@ h1 {
     justify-content: center;
 }
 
-.navbar-brand {
-    width: 222px;
-    height: 172px;
-}
-
-.otsikot {
-    font-family: Inria Serif;
-    font-size: 21px;
-    display: flex;
-    justify-content: center;
-    padding: 10px 15%; 
-    /* tällä paddingilla sain siirrettyä enemmän keskelle */
-}
-
 .otsikko {
-    position: absolute;
     font-family: 'Tangerine', cursive;
     font-size: 60px;
+    line-height: 1;
     display: flex;
     text-align: center;
     justify-content: center;
+    padding: 50px;
+    position: relative;
+    top: 130px; /*siirtää otsikkoa alemmas/ylemmäs*/
 }
 
 /* Meistä */
@@ -55,8 +73,6 @@ h1 {
     height: 721px;
     background-color: #e2ccb6;
     display: flex;
-    jjustify-content: space-between;
-
 }
 
 .kuva {
@@ -65,6 +81,10 @@ h1 {
     flex: 2;
     justify-content: center;
     align-items: center;
+    align-items: center;
+    mmargin: 20px;
+    mmargin-left: 30px;  
+    align-items: center; 
     mmargin: 20px;
     mmargin-left: 30px;  
 }
@@ -149,3 +169,32 @@ img {
     border-radius: 5px;
     text-align: center;
 }
+
+footer {
+    background-color: #EAF0D7;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 10 auto;
+}
+
+
+.yhteystiedot .aukioloajat {
+    font-size: 26px;
+    color: #000000;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo img {
+    max-width: 200px;
+    font-weight: bold;
+}
+
