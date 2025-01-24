@@ -26,6 +26,10 @@ header {
     height: auto;
 }
 
+.header-right img {
+    height: 36px;
+    width: auto;
+}
 .navbar-brand img {
     width: 208px;
     height: auto;
