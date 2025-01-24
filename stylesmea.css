@@ -1,0 +1,79 @@
+body {
+    width: 1289px;
+    height: auto;
+    font-family:serif;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.container {
+    max-width: 1239px;
+    max-height: auto;
+}
+
+header {
+    background-image: url(images/IMG_1148.jpg);
+    position: relative;
+    width: 1200px;
+    height: 1028px;
+    background-repeat: no-repeat; /* kuva ei toistu, pysyy yhtenä*/
+}
+
+h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 48px; 
+    justify-content: center;
+}
+
+.navbar-brand {
+    width: 222px;
+    height: 172px;
+}
+
+.otsikot {
+    font-family: Inria Serif;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 15%; 
+    /* tällä paddingilla sain siirrettyä enemmän keskelle */
+}
+
+.otsikko {
+    position: absolute;
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Menu alkaa tästä*/
+
+.juomat {
+    background-color: #f4ead5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px;
+    font-size: 18px;
+}
+
+.juomat button {
+    margin-top: 20px;
+    background-color: #E1CDA8;
+    border: none;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.image {
+    flex: 1;
+    max-width: 45%;
+}
+
+.text {
+    flex: 1;
+    max-width: 45%;
+}
