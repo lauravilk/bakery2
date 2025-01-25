@@ -20,6 +20,7 @@ header {
     background-repeat: no-repeat; /* kuva ei toistu, pysyy yhtenä*/
 }
 
+
 .container {
     display: flex;
     width: 1239px;
@@ -30,6 +31,7 @@ header {
     height: 36px;
     width: auto;
 }
+
 .navbar-brand img {
     width: 208px;
     height: auto;
