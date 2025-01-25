@@ -129,11 +129,14 @@ footer {
 }
 
 .logo img {
-    max-width: 200px;
-    font-weight: bold;
+    max-width: 230px;
 }
 
 .some {
-    
+    display: flex;
+    gap: 25px; /* Lisää tilaa ikonien väliin */
+    width: 200px;  /* Aseta haluttu leveys */
+    height: 55px; /* Säilytä kuvan mittasuhteet */
+    }
 
-}
+
