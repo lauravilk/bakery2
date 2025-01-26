@@ -101,7 +101,23 @@ h1 {
     max-width: 45%;
 }
 
+.juomat {
+    background-color: #f4ead5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px;
+    font-size: 18px;
+}
 
+.juomat button {
+    margin-top: 20px;
+    background-color: #E1CDA8;
+    border: none;
+    padding:10px 20px;
+    border-radius: 5px;
+}
 
 
 
@@ -134,7 +150,7 @@ footer {
 
 .some {
     display: flex;
-    gap: 25px; /* Lisää tilaa ikonien väliin */
+    gap: px; /* Lisää tilaa ikonien väliin */
     width: 200px;  /* Aseta haluttu leveys */
     height: 55px; /* Säilytä kuvan mittasuhteet */
     }
