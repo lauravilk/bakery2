@@ -1,5 +1,5 @@
 body {
-    width: 1289px;
+    width: 100%;
     height: auto;
     font-family:serif;
     font-size: 20px;
@@ -11,13 +11,14 @@ body {
 .container {
     max-width: 1239px;
     max-height: auto;
+    margin: auto;
 }
 
 header {
     background-image: url(images/IMG_1148.jpg);
     background-size: cover;
     position: relative;
-    width: 1280px;
+    width: 100%;
     height: 1028px;
     background-repeat: no-repeat; /* kuva ei toistu, pysyy yhtenä*/
     background-position: center 30%;
@@ -117,7 +118,7 @@ h1 {
 /* Meistä */
 
 .meista {
-    width: 1280px;
+    width: 100%;
     height: 721px;
     background-color: #e2ccb6;
     display: flex;
@@ -233,7 +234,7 @@ h1 {
 /* Ota yhteyttä */
 
 .contact {
-    width: 1280px;
+    width: 100%;
     height: 611px;
     background-color: #e2ccb6;
     padding: 90px;
