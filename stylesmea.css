@@ -5,8 +5,8 @@ body {
     font-size: 20px;
     line-height: 35px;
     margin: auto;
-    bbackground-color: #f4ead5;
-    background-color: #000000;
+    background-color: #f4ead5;
+    
 }
 
 .container {
@@ -28,11 +28,11 @@ header {
     background-blend-mode: overlay;
 }
 
-.container {
+/* .container {
     display: flex;
     width: 1239px;
     height: auto;
-}
+} */
 
 .container-fluid {
     padding-left: 30px;
@@ -131,7 +131,7 @@ h1 {
 }
 
 .kuva {
-    width: 600px;
+    wwidth: 600px;
     display: flex;
     flex: 2;
     justify-content: center;
@@ -190,7 +190,10 @@ h1 {
     height: auto;
     width: 640px;
     height: 360px;
-    fflex-shrink: 0;
+}
+
+h2 {
+    text-align: center;
 }
 
 .menu-item .text {
@@ -201,34 +204,32 @@ h1 {
     padding: 20px;
     max-width: 50%;
     font-size: 16px;
-    
+    text-align: left;
 }
 
-/* .contact {
-    width: 100%;
-    height: 611px;
-    background-color: #e2ccb6;
-    padding: 90px;
-    padding-left: 250px;
-    padding-right: 250px;
+.tutustu {
     text-align: center;
-} */
-
-.teksti2 {
-    width
 }
 
-.menu-item .tutustu button {
-    margin-top: 15px;
-    background-color: #E1CDA8;
+
+/* .tutustu2 button {
+    background-color: #FCF4E2;
     border: none;
+    margin-top: 20px;
     padding:10px 20px;
     border-radius: 5px;
-}
+    text-align: center;
+
+}   */
+
+/* koitin vaihtaa suolaiset herkut buttonin eriväriseksi, 
+että erottuis paremmin mut ei suostu menee keskelle. muuten onnistu
+joten muokkaa html suolaiset tutustu -> tutustu2 niin  väri vaihtuu */
+
 
 .juomat {
-    bbackground-color: #e2ccb6;
-    background-color: #000000;
+    bcackground-color: #e2ccb6;
+    background-color: #FCF4E2 ;
 }
 
 .makeiset {

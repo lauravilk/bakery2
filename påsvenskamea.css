@@ -1,0 +1,151 @@
+body {
+    width: 100%;
+    height: auto;
+    font-family:serif;
+    font-size: 20px;
+    line-height: 35px;
+    margin: auto;
+    background-color: #F4EAD5;
+}
+
+header {
+    background: url(images/IMG_1148.jpg);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20%;
+    bbackground: url(images/IMG_1148.jpg);
+    background-position: center 24%;
+    background-color: #fefbef4d;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo img {
+    width: 208px;
+    height: auto;
+    padding: 15px 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    text-decoration: none;
+    color: black;
+    width: 70px;
+    height: 35px;
+    font-size: 20px;
+    margin-right: 65px;
+}
+
+/* Menu alkaa tästä */
+
+.menu {
+    max-width: 1239px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    mmargin-bottom: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 0;
+    font-size: 18px;
+} 
+
+.menu-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.menu-item .image {
+    flex: 1;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    width: 640px;
+    height: 360px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.menu-item .text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 50%;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tutustu {
+    text-align: center;
+}
+
+.tutustu button {
+    text-align: center;
+    background-color: #E1CDA8;
+    border: none;
+    margin-top: 20px;
+    padding:10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* .tutustu2 button {
+    background-color: #FCF4E2;
+    border: none;
+    margin-top: 20px;
+    padding:10px 20px;
+    border-radius: 5px;
+    text-align: center;
+
+}   */
+
+/* koitin vaihtaa suolaiset herkut buttonin eriväriseksi, 
+että erottuis paremmin mut ei suostu menee keskelle. muuten onnistu
+joten muokkaa html suolaiset tutustu -> tutustu2 niin  väri vaihtuu */
+
+
+.juomat {
+    bcackground-color: #e2ccb6;
+    background-color: #FCF4E2 ;
+}
+
+.makeiset {
+    background-color: #e9edc9;
+}
+
+.suolaiset  {
+    background-color: #E2CCB6;
+}
+
+.kakut {
+    background-color: #FCF4E2 ;
+}
+
+.brunssi {
+    background-color: #E9EDC9;
+}
+
+
+
+
+

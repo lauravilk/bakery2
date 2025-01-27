@@ -1,0 +1,15 @@
+/* Footer alkaa tästä*/
+footer {
+    background-color: #EAF0D7;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 10 auto;
+}
