@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: serif;
+    background-color: #f7f1e6;
+}
+.top-bar {
+    background: #d3d3d3;
+    height: 30px;
+    text-align: left;
+    padding: 5px 15px;
+    color: #8b8b8b;
+    font-size: 14px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: url(images/IMG_1148.jpg);  
+}
+.logo img {
+    width: 80px;
+    height: auto;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER alkaa tästä*/
+.footer {
+    background-color: #EAF0D7;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 10 auto;
+}
+
+
+.yhteystiedot .aukioloajat {
+    font-size: 26px;
+    color: #000000;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo img {
+    max-width: 20px;
+}
+
+.some {
+    display: flex;
+    gap: 35px; 
+    width: 200px;  
+    height: 55px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    
+    }
