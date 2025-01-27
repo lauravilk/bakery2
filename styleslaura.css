@@ -5,6 +5,8 @@ body {
     font-size: 20px;
     line-height: 35px;
     margin: auto;
+    
+
 
 }
 
@@ -12,6 +14,7 @@ body {
     max-width: 1239px;
     max-height: auto;
     margin: auto;
+    width: 100%;
 }
 
 header {
@@ -161,7 +164,7 @@ h1 {
 /* Menu alkaa tästä*/
 
 .menu {
-    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -170,7 +173,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     mmargin-bottom: 20px;
-    wwidth: 100%;
+    width: 100%;
     flex-wrap: wrap;
     margin: 0;
     gap: 0;
@@ -238,8 +241,8 @@ h1 {
     height: 611px;
     background-color: #e2ccb6;
     padding: 90px;
-    padding-left: 250px;
-    padding-right: 250px;
+    padding-left: 250px auto;
+    padding-right: 250px auto;
     text-align: center;
 }
 
