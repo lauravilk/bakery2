@@ -4,6 +4,8 @@ body {
     font-family:serif;
     font-size: 20px;
     line-height: 35px;
+    margin: auto;
+
 }
 
 .container {
@@ -13,7 +15,6 @@ body {
 
 header {
     background-image: url(images/IMG_1148.jpg);
-    
     background-size: cover;
     position: relative;
     width: 1280px;
@@ -128,15 +129,18 @@ h1 {
     flex: 2;
     justify-content: center;
     align-items: center;
+    width: 528px;
+    height: 528px;
+    clip-path: circle(50%);
       
 }
 
-img {
+/* img {
     width: 528px;
     height: 528px;
     clip-path: circle(50%);
 
-}
+} */
 
 .aboutustext {
     display: flex;
@@ -155,32 +159,75 @@ img {
 
 /* Menu alkaa tästä*/
 
-.juomat {
-    background-color: #f4ead5;
+.menu {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.menu-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    mmargin-bottom: 20px;
+    wwidth: 100%;
     flex-wrap: wrap;
-    margin:20px;
+    margin: 0;
+    gap: 0;
     font-size: 18px;
 }
 
-.juomat button {
-    margin-top: 20px;
+.menu-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.menu-item .image {
+    flex: 1;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    width: 640px;
+    height: 360px;
+    fflex-shrink: 0;
+}
+
+
+.menu-item .text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 50%;
+    font-size: 16px;
+   
+}
+
+.menu-item .tutustu button {
+    margin-top: 15px;
     background-color: #E1CDA8;
     border: none;
     padding:10px 20px;
     border-radius: 5px;
 }
 
-.image {
-    flex: 1;
-    max-width: 45%;
+.juomat {
+    background-color: #F4EAD5;
 }
 
-.text {
-    flex: 1;
-    max-width: 45%;
+.makeiset {
+    background-color: #e9edc9;
+}
+
+.suolaiset  {
+    background-color: #E2CCB6;
+}
+
+.kakut {
+    background-color: #FCF4E2 ;
+}
+
+.brunssi {
+    background-color: #E9EDC9;
 }
 
 /* Ota yhteyttä */
@@ -210,6 +257,10 @@ img {
     text-align: center;
 }
 
+.tutustu a:hover {
+    text-decoration: underline;
+}
+
 footer {
     background-color: #EAF0D7;
     padding: 40px 0;
@@ -234,11 +285,12 @@ footer {
 }
 
 .logo img {
-    max-width: 200px;
-    font-weight: bold;
+    max-width: 230px;
 }
 
 .some {
-    
-
-}
+    display: flex;
+    gap: 20px; 
+    width: 200px;  
+    height: 55px; 
+    }
