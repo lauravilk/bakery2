@@ -72,8 +72,78 @@ h1 {
 }
 
 
+/* Menu alkaa tästä*/
+
+.menu {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    mmargin-bottom: 20px;
+    wwidth: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 0;
+    font-size: 18px;
+}
+
+.menu-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.menu-item .image {
+    flex: 1;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    width: 640px;
+    height: 360px;
+    fflex-shrink: 0;
+}
 
 
+.menu-item .text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 50%;
+    font-size: 16px;
+   
+}
+
+.menu-item .tutustu button {
+    margin-top: 15px;
+    background-color: #E1CDA8;
+    border: none;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.juomat {
+    background-color: #F4EAD5;
+}
+
+.makeiset {
+    background-color: #e9edc9;
+}
+
+.suolaiset  {
+    background-color: #E2CCB6;
+}
+
+.kakut {
+    background-color: #FCF4E2 ;
+}
+
+.brunssi {
+    background-color: #E9EDC9;
+}
 footer {
     background-color: #EAF0D7;
     padding: 40px 0;
