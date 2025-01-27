@@ -48,99 +48,77 @@ h1 {
     justify-content: center;
 }
 
-/* Menu alkaa tästä*/
+/* Menu alkaa tästä */
 
 .menu {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .menu-item {
     display: flex;
-}
-
-
-/* .juomat {
-    background-color: black;
-    display: flex;
     align-items: center;
     justify-content: space-between;
+    mmargin-bottom: 20px;
+    wwidth: 100%;
     flex-wrap: wrap;
-    margin:20px auto;
+    margin: 0;
+    gap: 0;
     font-size: 18px;
+} 
+
+.menu-item:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
-.text  {
+.menu-item .image {
     flex: 1;
-    max-width: 45%;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    width: 640px;
+    height: 360px;
+    fflex-shrink: 0;
 }
 
-.image {
+.menu-item .text {
     display: flex;
     flex: 1;
-    max-width: 45%;
-    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 50%;
+    font-size: 16px;
+    
 }
 
-.tutustu {
-    margin-top: 20px;
+.menu-item .tutustu button {
+    margin-top: 15px;
     background-color: #E1CDA8;
     border: none;
     padding:10px 20px;
     border-radius: 5px;
 }
 
+.juomat {
+    background-color: #F4EAD5;
+}
+
 .makeiset {
-    background-color: #E9EDC9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:20px auto;
-    font-size: 18px;
+    background-color: #e9edc9;
 }
 
-.text2  {
-    flex: 1;
-    max-width: 45%;
-}
-
-.image {
-    display: flex;
-    flex: 1;
-    max-width: 45%;
-    margin: 0;
-}
-
-.suolaiset {
+.suolaiset  {
     background-color: #E2CCB6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:20px auto;
-    font-size: 18px;
-} */
-
-/* .Kakut {
-    background-color: #FCF4E2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:20px auto;
-    font-size: 18px;
 }
 
-.Brunssi {
+.kakut {
+    background-color: #FCF4E2 ;
+}
+
+.brunssi {
     background-color: #E9EDC9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:20px auto;
-    font-size: 18px;
-} */
+}
 
 
 
