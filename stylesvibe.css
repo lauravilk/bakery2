@@ -71,74 +71,8 @@ h1 {
     top: 130px; /*siirtää otsikkoa alemmas/ylemmäs*/
 }
 
-/* Menu alkaa tästä*/
-
-.juomat {
-    background-color: #f4ead5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:20px;
-    font-size: 18px;
-}
-
-.juomat button {
-    margin-top: 20px;
-    background-color: #E1CDA8;
-    border: none;
-    padding:10px 20px;
-    border-radius: 5px;
-}
 
 
-.Makeiset, .kakut, .Brunssi {
-    background-color: #f4ead5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:20px;
-    font-size: 18px;
-}
-
-.Makeiset, .kakut, .Brunssi button {
-    margin-top: 20px;
-    background-color: #E1CDA8;
-    border: none;
-    padding:10px 20px;
-    border-radius: 5px;
-}
-
-
-
-.Suolaiset {
-    background-color: #f4ead5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:20px;
-    font-size: 18px;
-}
-
-.suolaiset button {
-    margin-top: 20px;
-    background-color: #E1CDA8;
-    border: none;
-    padding:10px 20px;
-    border-radius: 5px;
-}
-
-.image {
-    flex: 1;
-    max-width: 45%;
-}
-
-.text {
-    flex: 1;
-    max-width: 45%;
-}
 
 footer {
     background-color: #EAF0D7;
