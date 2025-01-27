@@ -51,6 +51,7 @@ h1 {
 /* Menu alkaa tästä */
 
 .menu {
+    max-width: 1239px;
     width: 100%;
     margin: 0 auto;
 }
@@ -92,6 +93,20 @@ h1 {
     
 }
 
+/* .contact {
+    width: 100%;
+    height: 611px;
+    background-color: #e2ccb6;
+    padding: 90px;
+    padding-left: 250px;
+    padding-right: 250px;
+    text-align: center;
+} */
+
+.teksti2 {
+    width
+}
+
 .menu-item .tutustu button {
     margin-top: 15px;
     background-color: #E1CDA8;
@@ -101,7 +116,7 @@ h1 {
 }
 
 .juomat {
-    background-color: #F4EAD5;
+    background-color: #e2ccb6;
 }
 
 .makeiset {
