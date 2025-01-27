@@ -91,17 +91,8 @@ h1 {
     border-radius: 5px;
 }
 
-.image {
-    flex: 1;
-    max-width: 45%;
-}
 
-.text {
-    flex: 1;
-    max-width: 45%;
-}
-
-.juomat {
+.Makeiset, .kakut, .Brunssi {
     background-color: #f4ead5;
     display: flex;
     align-items: center;
@@ -111,7 +102,7 @@ h1 {
     font-size: 18px;
 }
 
-.juomat button {
+.Makeiset, .kakut, .Brunssi button {
     margin-top: 20px;
     background-color: #E1CDA8;
     border: none;
@@ -119,10 +110,34 @@ h1 {
     border-radius: 5px;
 }
 
-@media (max-width: 540px) {
-    .menu {
-        grid-template-columns: 1fr;
-    }
+
+
+.Suolaiset {
+    background-color: #f4ead5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px;
+    font-size: 18px;
+}
+
+.suolaiset button {
+    margin-top: 20px;
+    background-color: #E1CDA8;
+    border: none;
+    padding:10px 20px;
+    border-radius: 5px;
+}
+
+.image {
+    flex: 1;
+    max-width: 45%;
+}
+
+.text {
+    flex: 1;
+    max-width: 45%;
 }
 
 footer {
@@ -154,9 +169,9 @@ footer {
 
 .some {
     display: flex;
-    gap: px; /* Lisää tilaa ikonien väliin */
-    width: 200px;  /* Aseta haluttu leveys */
-    height: 55px; /* Säilytä kuvan mittasuhteet */
+    gap: 20px; 
+    width: 200px;  
+    height: 55px; 
     }
 
 
