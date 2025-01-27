@@ -145,7 +145,7 @@ h1 {
     background-color: #E9EDC9;
 }
 footer {
-    background-color: #87af05;
+    background-color: #EAF0D7;
     padding: 40px 0;
     text-align: center;
 }
@@ -168,7 +168,7 @@ footer {
 }
 
 .logo img {
-    max-width: 230px;
+    max-width: 20px;
 }
 
 .some {
@@ -176,6 +176,11 @@ footer {
     gap: 35px; 
     width: 200px;  
     height: 55px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    
     }
 
 
