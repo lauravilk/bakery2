@@ -19,15 +19,45 @@
             <a href="#">Tilaukset</a>
             <a href="#">Meistä</a>
             <a href="#">Yhteystiedot</a>
-            <a href="#">på svenska</a>
+            <a href="#" class="nav-link">
+                <img src="images/Sweden.png" width="25" height="15" alt="på svenska" class="flag">
+                På svenska
+                </a>
         </div>
     </div>
     </header>
 
     <main>
         <!-- sisällö -->
-    </main>
 
+            <form action="/action_page.php">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="fname">Etunimi ja sukunimi:</label>
+                        <input type="text" id="fullname" name="fullname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Osoite:</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Puhelinumero:</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Sähköposti:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Tilauksen tiedot:</label>
+                        <textarea type="text" id="order" name="order"></textarea>
+                    </div> 
+                    <div class="form-group">
+                        <input type="submit" value="Lähetä">
+                    </div>        
+                </div>
+            </form>
+    </main>
 
 <!---FOOTERI-->
 <footer>
