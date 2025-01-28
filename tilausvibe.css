@@ -59,7 +59,30 @@ main {
     height: 650px; 
     background-color: #f9f4e9;
 }
+.tilausohjeet {
+    font-family: 'InriaSerif';
+    font-size: 21px;
+    width: 100%;
+    padding: 90px;
+    padding-left: 250px auto;
+    padding-right: 250px auto;
+    text-align: center;
+    
+} 
 
+.teksti {
+    text-align: left;
+}
+
+.tilausohjeet h1 {
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+
+.tilausohjeet p {
+    max-width: 800px;
+    margin-left: 20%;
+}
 
 /*TILAUSKAAVAKE*/
 
