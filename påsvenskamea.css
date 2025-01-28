@@ -9,20 +9,24 @@ body {
 }
 
 header {
-    background: url(images/IMG_1148.jpg);
-}
-
-.navbar {
     display: flex;
     align-items: center;
-    padding: 10px 20%;
-    bbackground: url(images/IMG_1148.jpg);
-    background-position: center 24%;
-    background-color: #fefbef4d;
-    background-blend-mode: overlay;
+    padding: 30px 0;
+    background-image: url(images/IMG_1148.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center 25%;
+    background-color: rgba(254, 251, 239, 0.3);
+    background-blend-mode: overlay;
 }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
 
 .logo img {
     width: 208px;
@@ -44,6 +48,11 @@ header {
     height: 35px;
     font-size: 20px;
     margin-right: 65px;
+}
+
+main {
+    height: 650px; 
+    background-color: #f9f4e9;
 }
 
 /* Menu alkaa tästä */
@@ -143,6 +152,23 @@ joten muokkaa html suolaiset tutustu -> tutustu2 niin  väri vaihtuu */
 
 .brunssi {
     background-color: #E9EDC9;
+}
+
+footer {
+    background-color: #e4eec9; 
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center; 
+    align-items: center; 
 }
 
 
