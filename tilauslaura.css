@@ -101,7 +101,7 @@ textarea {
 input[type=submit] {
     display: flex;
     align-items: center;
-    background-color: #e2ccb6;
+    background-color: #E1CDA8;
     border: none;
     padding: 16px 32px;
     cursor: pointer;
@@ -109,7 +109,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #e1cda8;
+    background-color: #E1CDA8;
     color: white;
 }
     
