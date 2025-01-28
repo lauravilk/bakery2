@@ -65,12 +65,12 @@
         </header>
         <!-- MEISTÄ-->
          <div class="meista">
-            <div class="kuva">
+            <div class="kuvameista">
                 <img src="images/bakery.jpg"  alt="bakery image">
             </div>
             <div class="aboutustext">
               <h3>
-                <p>Meistä <br>
+                Meistä <br>
                   <br>
               </h3>
               <p>
@@ -210,18 +210,14 @@
           var otsikko = document.querySelector(".otsikko");
 
           navbarCollapse.addEventListener("show.bs.collapse", function () {
-              otsikko.style.opacity = "0";  // Oculta el título con animación
+              otsikko.style.opacity = "0"; 
           });
 
           navbarCollapse.addEventListener("hide.bs.collapse", function () {
-              otsikko.style.opacity = "1";  // Muestra el título con animación
+              otsikko.style.opacity = "1";  
           });
       });
   </script>
-
-
-
-
   </body>
 </html>
 
