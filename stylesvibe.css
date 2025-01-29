@@ -34,10 +34,10 @@ header {
 }
 
 .navbar-brand img {
-    width: 208px;
+    width: 200px;
     height: auto;
-    margin: 20px;
-    padding-left: 10px;
+    margin-left: 5px;
+    padding-left: 5px;
 }
 
 a .navbar-nav, a:active .navbar-nav, a:visited {
@@ -56,14 +56,11 @@ a:hover {
 }
 
 .collapse {
-    width: 864px;
-    height: 41px;
     font-family: 'InriaSerif';
     font-size: 24px;
-    display: flex;
     justify-content: space-around;
-    margin-right: 70px;
-}
+    margin: 0px; 
+}  
 
 .navbar-nav li {
     margin: 0 15px;
@@ -251,7 +248,7 @@ h2 {
 
 .contact {
     width: 100%;
-    height: 611px;
+    hheight: 611px;
     bbackground-color: #e2ccb6;
     padding: 90px;
     padding-left: 250px;
@@ -309,14 +306,14 @@ footer {
     color: #000000;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-right: 60px;
+    margin-right: 0px;
     }
 
 
 .logo img {
     width: 270px;
     padding: 5px  50px;
-    margin-right: 110px;
+    margin-right: 0px;
     
 }
 
@@ -331,7 +328,7 @@ footer {
     width: 200px;  
     height: 50px; 
     display: flex;
-    margin-right: 50px;
+    margin-right: 0px;
     justify-content: center; 
     align-items: center;  
 }
@@ -355,43 +352,99 @@ footer {
 }
 
 
-/* Responsive Design */
+/* Yleiset mobiiliasetukset */
 @media (max-width: 700px) {
-    body, .meista, .menu, .contact, footer {
-        flex-direction: column;
-        text-align: left; /*teksti vasempaan reunaan*/
-    }
-
     body {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .container {
         width: 100%;
+        padding: 0 15px;
     }
 
-    .kuva-1 {
-        max-width: 100%;
-        height: auto;
-        width: 328px;
-        height: 328px;
-        clip-path: circle(50%);
-        margin: 20px;
-        
+    header {
+        height: 600px;
+        background-position: center;
     }
 
-    .teksti {
-        width: 100%;
-    }
-
-    .contact {
-        max-width: 100%;
-        
-    }
-
-    .nav-links {
+    .navbar-nav {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .navbar-nav li {
+        margin: 10px 0;
+    }
+
+    .otsikko {
+        font-size: 40px;
+        padding: 30px;
+    }
+
+    .otsikko h1 {
+        font-size: 60px;
+    }
+    
+    .otsikko p {
+        font-size: 40px;
+    }
+    
+    .meista {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    
+    .kuvameista, .aboutustext {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .kuva-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu-item .image, .menu-item .text {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .contact {
+        padding: 40px 20px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .some {
+        flex-direction: row;
+        justify-content: center;
     }
 
     .some img {
-        width: 30px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
 
+    .some {
+        justify-content: center;
+    }
 }

@@ -23,9 +23,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100px;
-    padding: 0 50px;
-    gap: 35px;
+    max-width: 110px;
+    padding: 0 20px;
 }
 
 .logo img {
@@ -36,7 +35,7 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 25px;
 }
 
 .nav-links a {
