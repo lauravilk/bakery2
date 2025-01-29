@@ -1,68 +1,99 @@
-.body {
+body {
     width: 100%;
     height: auto;
     font-family:serif;
     font-size: 20px;
     line-height: 35px;
     margin: auto;
-    background-color: #F4EAD5;
+    background-color: #f4ead5;
+    
+}
+
+.container {
+    max-width: 1239px;
+    max-height: auto;
+    margin: auto;
+    width: 100%;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    padding: 30px 0;
     background-image: url(images/IMG_1148.jpg);
     background-size: cover;
-    background-position: center 25%;
-    background-color: rgba(254, 251, 239, 0.3);
+    position: relative;
+    width: 100%;
+    height: 1028px;
+    background-repeat: no-repeat; /* kuva ei toistu, pysyy yhtenä*/
+    background-position: center 30%;
+    background-color: rgba(254, 251, 239, 0.5);
     background-blend-mode: overlay;
+    height: 250px;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 110px;
-    padding: 0 20px;
+
+.container-fluid {
+    padding-left: 30px;
 }
 
-.logo img {
-    width: 250px;
+.navbar-brand img {
+    width: 208px;
     height: auto;
-    padding: 15px 10px;
+    margin: 20px;
+    padding-left: 10px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
+a .navbar-nav, a:active .navbar-nav, a:visited {
+    width: 864px;
+    height: 41px;
+    font-family: 'InriaSerif';
+    font-size: 24px;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    text-decoration: none;
-    color: black;
-    width: 70px;
-    height: 35px;
-    font-size: 20px;
-    margin: 20px;
-    font-weight: 50;
-    font-family: serif;
+    margin-right: 50px;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.collapse {
+    width: 864px;
+    height: 41px;
+    font-family: 'InriaSerif';
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 70px;
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
 }
 
 
+.otsikko {
+    display: none;
+}
+
+
+/* SISÄLTÖ ALKAA TÄSTÄ*/
 
 main {
-    height: 650px; 
+    hheight: 650px; 
     background-color: #f9f4e9;
 }
+
 .tilausohjeet {
     font-family: 'InriaSerif';
     font-size: 21px;
     width: 100%;
     padding: 90px;
+    padding-bottom: 30px;
     padding-left: 250px auto;
     padding-right: 250px auto;
     text-align: center;
@@ -87,6 +118,7 @@ main {
 
 form {
     padding: 50px;
+    padding-top: 30px;
     margin: 0px;
 }
 form.container {
@@ -136,6 +168,7 @@ input[type=submit]:hover {
     background-color: #E1CDA8;
     color: white;
 }
+    
 
 /* FOOTER alkaa tästä*/
 footer {
@@ -192,9 +225,90 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 700px) {
-    .header-container, .footer-container {
+    .header-container, header .footer, .tilausohjeet, form {
+        display: flex;
         flex-direction: column;
         text-align: center;
+        max-height: auto;
+        width: 100%;
+    }
+
+    .otsikko {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .navbar {
+        height: auto
+    }
+
+    .container-fluid {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        padding: 30px;
+    }
+
+    .logoimg {
+        padding-bottom: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+    a.nav-link:hover {
+        ttext-decoration: underline;
+        color: white;
+    }
+
+    /*valikon linkit*/
+    .navbar-collapse {
+        text-align: center;
+        z-index: 2;
+    }
+
+    .main-content {
+        position: relative;
+        z-index: 0;
+    }
+
+    .tilausohjeet {
+        padding: 30px;
+    }
+
+    .tilausohjeet .teksti {
+        width: 96%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .teksti {
+        margin-left: 0px;
+        margin: 0;
+        width: 96%;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    form {
+        padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .form-container {
+        width: 100%;
+
     }
 
     .nav-links {
@@ -204,6 +318,16 @@ footer {
 
     .some img {
         width: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+
+    .logo img, .Yhteystiedot, .aukioloajat, .some {
+        margin: 0px;
     }
 }
 
