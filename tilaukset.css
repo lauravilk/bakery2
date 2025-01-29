@@ -273,6 +273,7 @@ footer {
         width: 96%;
         padding: 0px;
         margin: 0px;
+        font-size: 20px;
     }
 
     .teksti {
@@ -284,6 +285,7 @@ footer {
 
     p {
         margin: 0;
+        font-size: 20px;
     }
 
     form {
