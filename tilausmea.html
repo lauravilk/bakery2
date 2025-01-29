@@ -16,17 +16,17 @@
             <img src="images/kanelipuu.png" alt="Kahvila Logo">
         </div>
         <div class="nav-links">
-            <a href="#">Etusivu</a>
+            <a href="mea.html">Etusivu</a>
             <a href="#">Tuotteet</a>
-            <a href="#">Tilaukset</a>
+            <a href="tilausmea.html">Tilaukset</a>
             <a href="#">Meistä</a>
             <a href="#">Yhteystiedot</a>
-            <a href="#">på svenska</a>
+            <a href="påsvenskamea.html">På svenska</a>
         </div>
     </div>
     </header>
 
-    <main>
+    
         <div class="tilausohjeet">
             <div class="tekstit">
                 <h1>
@@ -40,6 +40,38 @@
                 Mikäli tarve on 3vrk sisällä, olethan meihin yhteydessä puhelimitse.
             </p>
         </div>
+    
+
+    
+        <!-- sisällö -->
+        <main>
+            <form action="/action_page.php">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="fname">Etunimi ja sukunimi:</label>
+                        <input type="text" id="fullname" name="fullname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Osoite:</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Puhelinumero:</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Sähköposti:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Tilauksen tiedot:</label>
+                        <textarea type="text" id="order" name="order"></textarea>
+                    </div> 
+                    <div class="form-group">
+                        <input type="submit" value="Lähetä">
+                    </div>        
+                </div>
+            </form>
     </main>
 
 
