@@ -186,6 +186,10 @@ h2 {
     text-align: center;
 }
 
+button:hover {
+    color: white;
+}
+
 .juomat {
     background-color: #E2CCB6;
 }
