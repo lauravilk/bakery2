@@ -60,6 +60,7 @@ main {
 }
 
 .tilausohjeet {
+    background-color: #f9f4e9;
     font-family: 'InriaSerif';
     font-size: 21px;
     width: 100%;
@@ -85,25 +86,57 @@ main {
 }
 
 
-/* .tekstit {
+form {
+    padding: 50px;
+    margin: 0px;
+}
+form.container {
     display: flex;
-    flex: 1;
     flex-direction: column;
-    juustify-content: center;
-    aalign-items: center;
-    padding: 60px;
-    padding-left: 20px;
-    margin-right: 20px;
-}  */
+    align-items: center;
+    width: 96%;
+    height: auto;
+    
+}
 
-/* h1 {
-    font-size: 40px;
+.form-group {
     display: flex;
-    justify-content: center;
-    text-align: center;
     flex-direction: column;
-    position: relative;
-} */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+
+input[type=text], textarea {
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+input[type=submit] {
+    display: flex;
+    align-items: center;
+    background-color: #E1CDA8;
+    border: none;
+    padding: 16px 32px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+input[type=submit]:hover {
+    background-color: #E1CDA8;
+    color: white;
+}
 
 
 

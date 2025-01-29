@@ -313,5 +313,45 @@ footer {
     height: 55px; 
     }
 
+    /* Responsive Design */
+@media (max-width: 700px) {
+    body, .meista, .menu, .contact, footer {
+        flex-direction: column;
+        text-align: left; /*teksti vasempaan reunaan*/
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .kuva-1 {
+        max-width: 100%;
+        height: auto;
+        width: 328px;
+        height: 328px;
+        clip-path: circle(50%);
+        margin: 20px;
+        
+    }
+
+    .teksti {
+        width: 100%;
+    }
+
+    .contact {
+        max-width: 100%;
+        
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .some img {
+        width: 30px;
+    }
+
+}
 
 
