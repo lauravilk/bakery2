@@ -305,15 +305,15 @@ footer {
     font-size: 17px;
     color: #000000;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-right: 0px;
+    font-family: 'InriaSerif';
+    margin-right: 60px;
     }
 
 
 .logo img {
     width: 270px;
     padding: 5px  50px;
-    margin-right: 0px;
+    margin-right: 110px;
     
 }
 
@@ -328,7 +328,7 @@ footer {
     width: 200px;  
     height: 50px; 
     display: flex;
-    margin-right: 0px;
+    margin-right: 50px;
     justify-content: center; 
     align-items: center;  
 }
@@ -379,6 +379,11 @@ footer {
         margin: 10px 0;
     }
 
+    a.nav-link:hover {
+        color: white;
+        text-decoration: none;
+    }
+
     .otsikko {
         font-size: 40px;
         padding: 30px;
@@ -395,7 +400,7 @@ footer {
     .meista {
         flex-direction: column;
         height: auto;
-        text-align: center;
+        text-align: left;
     }
     
     .kuvameista, .aboutustext {
@@ -425,11 +430,13 @@ footer {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        margin: 20px;
     }
 
     .some {
         flex-direction: row;
         justify-content: center;
+        margin: 0px;
     }
 
     .some img {
@@ -446,5 +453,7 @@ footer {
 
     .some {
         justify-content: center;
+        margin-right: 0px;
     }
 }
+
