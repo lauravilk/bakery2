@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesvibe.css">
 
     <!-- LINKIT FONTTEIHIN-->
     <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container"></div>
         <!--HEADER-->
         <header>
             <div>
@@ -42,7 +42,10 @@
                               <a class="nav-link" href="#">Yhteystiedot</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">på svenska</a>
+                              <a href="#" class="nav-link">
+                                <img src="images/Sweden.png" width="25" height="15" alt="på svenska" class="flag">
+                                på svenska
+                                </a>
                             </li>
                           </div>  
                           
@@ -51,21 +54,26 @@
                     </div>
                   </nav>
             </div>
-            <div class="otsikko">
-              
-                Kahvila kanelipuu <br>
-                Hyvää makua sydämmellä leivottuna
+            <div class="otsikko text-center">
+              <h1>
+                Kahvila kanelipuu
+              </h1>
+              <p>
+                  Hyvää makua sydämellä leivottuna
+              </p>
             </div>
         </header>
-
         <!-- MEISTÄ-->
          <div class="meista">
-            <div class="kuva">
-                <img src="images/bakery.jpg"  alt="bakery image">
+            <div class="kuvameista">
+                <img class="img-fluid" src="images/bakery.jpg"  alt="bakery image">
             </div>
             <div class="aboutustext">
-                <p>Meistä <br>
+              <h3>
+                Meistä <br>
                   <br>
+              </h3>
+              <p>
                   Kahvila Kanelipuu on paikka, jossa laadukkaat raaka-aineet ja käsin tehty rakkaus kohtaavat. Valmistamme päivittäin herkullisia kotitekoisia leivonnaisia, jotka tuovat mieleen kodin  lämmön ja parhaat makumuistot. 
                   Meille tärkeitä ovat tuoreus, laatu ja asiakkaidemme hyvinvointi, mikä näkyy jokaisessa tarjoamassamme  tuotteessa. Tule nauttimaan kiireetön hetki kahvikupin äärellä ja anna makujen kertoa tarinansa!
                   Meiltä myös käsintehdyt leivonnaiset kotiin tilattuna.
@@ -73,44 +81,143 @@
             </div>
          </div>
 
-         <!--MENU-->
-         <div class="menu">
-            kuvat ja tekstit
-         </div>
-
+   <!--MENU-->
+   <div class="menu">
+       
+    <!--JUOMAT-->
+    <div class="menu-item juomat">
+        <!-- <div class="card"> -->
+        <img src="images/menucoffee.jpg" alt="Kahvi ja juomat" class="image">
+        <div class="text">
+        <h2>Kahvit ja juomat</h2>
+        <p>
+            Olipa päiväsi alkamassa, kesken tai loppumassa, meillä on juuri se täydellinen kahvi tai juoma, joka kruunaa hetken. Käsityönä valmistetut erikoiskahvimme, virkistävät teevalikoimat ja raikkaat kylmät juomat tekevät jokaisesta suupalasta nautinnon.
+        </p>
+        <div class="tutustu">
+        <button>TUTUSTU</button>
+        </div>
+        </div>
+    </div>
+    <!-- MAKEISET-->
+    <div class="menu-item makeiset">
+        <!-- <div class="card reverse"> -->
+        <img src="images/vegaaniset_korvapuustit.jpg" alt="makeiset" class="image">
+        <div class="text">
+        <h2>Makeiset</h2>
+        <p>
+            Kaipaatko jotain makeaa arkeesi tai juhlapöytään? Valikoimastamme löydät suussa sulavia herkkuja, jotka on valmistettu laadukkaista raaka-aineista ja rakkaudella. Tule nauttimaan käsintehdyistä leivoksista, suklaisista herkuista ja täyteläisistä unelmista
+        </p>
+        <div class="tutustu">
+        <button>TUTUSTU</button>
+        </div>
+        </div>
+    </div>
+    <!-- SUOLAISET-->
+    <div class="menu-item suolaiset">
+        <!-- <div class="card"> -->
+        <img src="images/sandwich.jpg" alt="suolaiset" class="image">
+        <div class="text">
+        <h2>Suolaiset herkut</h2>
+        <p>
+            Kun kaipaat jotain täyteläistä ja suolaista, meidän herkkumme ovat valmiina yllättämään sinut. Mehevät voileivät, maistuvat piirakat ja suolaiset herkut ovat täydellinen valinta lounaaksi, välipalaksi tai rentoihin hetkiin ystävien kanssa.
+        </p>
+        <div class="tutustu">
+        <button>TUTUSTU</button>
+        </div>
+        </div>
+       
+    </div>
+    <!-- KAKUT-->
+    <div class="menu-item kakut">
+        <img src="images/kakku.avif" alt="kakut" class="image">
+        <div class="text">
+        <h2>Kakut</h2>
+        <p>
+            Kakun ei tarvitse olla vain jälkiruoka – se voi olla päivän kohokohta! Meidän kakuissamme yhdistyvät kauniit yksityiskohdat ja täydellinen maku. Olipa kyseessä pieni hemmotteluhetki tai suuri juhla, kakkumme tekevät tilaisuudesta ikimuistoisen.
+        </p>
+        <div class="tutustu">
+        <button>TUTUSTU</button>
+        </div>
+        </div>
+    </div>
+    <!-- BRUNSSI-->
+    <div class="menu-item brunssi">
+        <img src="images/brunssi.jpg" alt="brunssi" class="image">
+        <div class="text">
+        <h2>Brunssi ja tilaisuudet</h2>
+        <p>
+            Aloita päiväsi tyylillä meidän brunssillamme! Tarjolla on runsas valikoima tuoreita ja herkullisia ruokia, jotka sopivat täydellisesti sekä arjen hemmotteluun että erityisiin tilaisuuksiin. Tuo ystävät mukaan ja tee yhdessäolosta ikimuistoinen makuelämys!
+        </p>
+        <div class="tutustu">
+        <button>TUTUSTU</button>
+        </div>
+        </div>
+       
+    </div>
+</div>
+    <!-- menu loppuu-->
          <!--OTA YHTEYTTÄ-->
-         <div class="contact">
-            tekstiä
-         </div>
-
          
+    <div class="contact">
+       <div class="contact-header">
+            <h3>
+                Vuokraa tila & järjestä yksityistilaisuus<br>
+                <br>
+            </h3>
+            <p class="teksti">
+                 Tervetuloa juhlimaan ja rentoutumaan kahvilamme tiloihin! Meillä voit järjestää unohtumatonta juhlaa tai tilaisuutta - olipa kyseessä syntymäpäivä, juhlaillallinen, yrityksen tilaisuus tai muu erityinen hetki. Tarjoamme vuokrattavaksi modernit ja viihtyisät tilat, jotka voidaan räätälöidä juuri sinun tarpeidesi mukaan.
+                 Kahvilamme tilat ovat täydelliset pienistä intiimeistä juhlista suuriin tilaisuuksiin, ja tarjoamme myös monipuolisia catering-vaihtoehtoja, jotka tekevät juhlasta vieläkin maistuvamman.<br> Autamme mielellämme tilaisuuden suunnittelussa ja toteutuksessa, jotta voimme luoda juuri sinun näköisesi juhlan.
+                 Ota yhteyttä ja kerro, millaista tilaisuutta olet suunnittelemassa - tehdään siitä yhdessä ikimuistoinen kokemus!
+            </p>
+            <div class="tutustu">
+                 <button>ota yhteyttä</button>
+                 </div>
+        </div>
+    </div>
+
+
          <footer>
          <div class="footer-container">
-            <div class="yhteystiedot">
-                <h1>Yhteystiedot</h1>
+            <div class="Yhteystiedot">
+                <b>Yhteystiedot</b><br>
                 Kanelikujantie 5<br>
                 11300 Hämeenlinna<br>
                 <a href="info@kanelipuu.fi">info@kanelipuu.fi</a><br>
                 +358 9653585
             </div>
             <div class="aukioloajat">
-                <h2>Avoinna</h2>
+                <b>Avoinna</b><br>
                 Ma - Pe 8 am - 7 pm<br>
                 La 9 am - 7 pm<br>
                 Sun 9 am - 6 pm
             </div>
             <div class="logo">
-                <img src="kanelipuu.png" alt="Kanelipuu logo">
+                <img class="img-fluid" src="images/kanelipuu.png" alt="Kanelipuu logo">
             </div>
             <div class="some">
-              <a href="#"><img src="tiktok.png" alt="TikTok"></a>
-              <a href="#"><img src="facebook.png" alt="Facebook"></a>
-              <a href="#"><img src="instagram.png" alt="Instagram"></a>
+              <img src="images/tiktok-logo.png" alt="TikTok">
+              <img src="images/facebook-logo.png" alt="Facebook">
+              <img src="images/instagram-logo2.png" alt="Instagram">
             </div>
          </div>
     </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var navbarToggler = document.querySelector(".navbar-toggler");
+          var navbarCollapse = document.querySelector("#navbarNav");
+          var otsikko = document.querySelector(".otsikko");
+
+          navbarCollapse.addEventListener("show.bs.collapse", function () {
+              otsikko.style.opacity = "0"; 
+          });
+
+          navbarCollapse.addEventListener("hide.bs.collapse", function () {
+              otsikko.style.opacity = "1";  
+          });
+      });
+  </script>
+  </body>
 </html>
 
