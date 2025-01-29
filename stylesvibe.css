@@ -451,9 +451,23 @@ footer {
         gap: 10px;
     }
 
-    .some {
-        justify-content: center;
-        margin-right: 0px;
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
     }
-}
 
+    .some img {
+        width: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+
+    .logo img, .Yhteystiedot, .aukioloajat, .some {
+        margin: 0px;
+    }
+
+}
