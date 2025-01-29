@@ -255,7 +255,7 @@ footer {
         margin: 10px 0;
     }
 
-    a.nnav-link:hover {
+    a.nav-link:hover {
         color: white;
         text-decoration: none;
     }

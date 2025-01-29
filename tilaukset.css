@@ -99,6 +99,7 @@ main {
 
 .teksti {
     text-align: left;
+    font-size: 18px;
 }
 
 .tilausohjeet h1 {
@@ -267,25 +268,26 @@ footer {
 
     .tilausohjeet {
         padding: 30px;
+        font-size: 16px;
     }
 
-    .tilausohjeet .teksti {
+    .tilausohjeet p {
         width: 96%;
         padding: 0px;
         margin: 0px;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .teksti {
         margin-left: 0px;
         margin: 0;
         width: 96%;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     p {
         margin: 0;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     form {
