@@ -268,26 +268,26 @@ footer {
 
     .tilausohjeet {
         padding: 30px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .tilausohjeet p {
         width: 96%;
         padding: 0px;
         margin: 0px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .teksti {
         margin-left: 0px;
         margin: 0;
         width: 96%;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     p {
         margin: 0;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     form {
