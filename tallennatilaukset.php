@@ -20,7 +20,7 @@ catch(Exception $e){
 /*luetaan tiedot lomakkeelta */
 $nimi=isset($_POST["nimi"]) ? $_POST["nimi"] :"";
 $osoite=isset($_POST["osoite"]) ? $_POST["osoite"] :"";
-$puhelin=isset($_POST["puhelin"]) ? $_POST["puhelin"] :"0";
+$puhelin=isset($_POST["puhelin"]) ? $_POST["puhelin"] :"";
 $sposti=isset($_POST["sposti"]) ? $_POST["sposti"] :"";
 $tilaus=isset($_POST["tilaus"]) ? $_POST["tilaus"] :"";
 
@@ -33,7 +33,7 @@ if (!$stmt) {
     die("Virhe SQL-lauseessa: " . mysqli_error($yhteys));
 }
 
-mysqli_stmt_bind_param($stmt, 'ssiss', $nimi, $osoite, $puhelin, $sposti, $tilaus); /*sd = s=string, d=desimaaliluku */
+mysqli_stmt_bind_param($stmt, 'sssss', $nimi, $osoite, $puhelin, $sposti, $tilaus); /*sd = s=string, d=desimaaliluku */
 
 // Suoritetaan kysely ja tarkistetaan mahdolliset virheet
 if (!mysqli_stmt_execute($stmt)) {
@@ -42,5 +42,5 @@ if (!mysqli_stmt_execute($stmt)) {
 
 //ysqli_stmt_execute($stmt);
 
-header("Location:./kiitostilauksesta.php"); /*siirtyy halutulle sivulle*/
+header("Location:./lauratilaukset.html"); /*siirtyy halutulle sivulle*/
 ?>
