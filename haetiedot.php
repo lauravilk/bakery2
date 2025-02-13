@@ -61,11 +61,16 @@
     </header>
 
 <?php
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+// Hakee tietokannan tiedot erillisestä salatusta tiedostosta 
+$initials=parse_ini_file(".ht.asetukset.ini"); 
 
 try{
-    //https://www.php.net/manual/en/funtion.mysqli-connesct.php
-    $yhteys=mysqli_connect("localhost", "trtkp24_5", "xAsFu8yG", "trtkp24_5");
+  $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]); 
+
+  //Tarkista onko yhteys onnistunut
+  if(mysqli_connect_errno()){
+    throw new Exception("Yhteysvirhe: " . mysqli_connect_error());
+  }
 }
 catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");
