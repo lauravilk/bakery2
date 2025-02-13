@@ -60,54 +60,29 @@
         </div>
     </header>
 
-    <main>
-        <!-- sisällö -->
+<?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-        <div class="tilausohjeet">
-            <div class="tekstit">
-                <h1>
-                    Näin teet tilauksen helposti<br>
-                </h1>
-            </div>
-            <p class="teksti">Täytä alla olevan lomakkeen tiedot huolellisesti. Kirjoita tilauskenttään toiveesi, kuten tuotteen nimi,määrä, mahdolliset erityistoiveet (laktoositon, gluteenoiton) sekä ajankohta milloin tuotteet tarvitaan. <br>
-                <br>Klikkaa lähetä, niin vastaanotamme tilauksesti ja saat tilausvahvistuksen sähköpostiisi. <br>
-                Olemme teihin yhteydessä 24h sisällä tilauksesta sähköpostitse tai puhelimitse ja sovimme nouto- tai toimitusajasta. <br>
-                <br>HUOM! Tilaukset tulee tehdä vähintään 3vrk etukäteen, jotta voimme valmistaa tuotteet tuoreina ja laadukkaasti! <br>
-                Mikäli tarve on 3vrk sisällä, olethan meihin yhteydessä puhelimitse.
-            </p>
-        </div>    
+try{
+    //https://www.php.net/manual/en/funtion.mysqli-connesct.php
+    $yhteys=mysqli_connect("localhost", "trtkp24_5", "xAsFu8yG", "trtkp24_5");
+}
+catch(Exception $e){
+    header("Location:../html/yhteysvirhe.html");
+    exit;
+}
 
-        <form action="tallennatilaukset.php" method="post">
-          <div class="form-container">
-              <div class="form-group">
-                  <label for="nimi">Etunimi ja sukunimi:</label>
-                  <input type="text" id="nimi" name="nimi">
-              </div>
-              <div class="form-group">
-                  <label for="osoite">Osoite:</label>
-                  <input type="text" id="osoite" name="osoite">
-              </div>
-              <div class="form-group">
-                  <label for="puhelin">Puhelinumero:</label>
-                  <input type="text" id="puhelin" name="puhelin">
-              </div>
-              <div class="form-group">
-                  <label for="sposti">Sähköposti:</label>
-                  <input type="text" id="sposti" name="sposti">
-              </div>
-              <div class="form-group">
-                  <label for="tilaus">Tilauksen tiedot:</label>
-                  <textarea id="tilaus" name="tilaus"></textarea>
-              </div> 
-              <div class="form-group">
-                  <input type="submit" value="Lähetä">
-              </div>        
-          </div>
-      </form>
-    </main>
+$tulos=mysqli_query($yhteys,"select * from tilaukset");
 
+while ($rivi=mysqli_fetch_object($tulos)){
+    print "nimi=$rivi->nimi Osoite=$rivi->osoite puhelin=$rivi->puhelin sahkoposti=$rivi->sahkoposti tilaukset=$rivi->tilaukset". 
+    "<a href='./poista.php?id=$rivi->id'>Poista</a><br>".
+    "<a href='./muokkaa.php?id=$rivi->id'>muokkaa</a><br>";
 
-<!---FOOTERI-->
+}
+$ok=mysqli_close($yhteys);
+?>
+
 <footer>
     <div class="footer-container">
        <div class="Yhteystiedot">
@@ -152,4 +127,3 @@
 </script>
 </body>
 </html>
-
