@@ -1,11 +1,15 @@
 <?php
 // TÄMÄ LOMAKE TALLENTAA TIEDOT TIETOKANTAAN
 
+error_reporting(E_ALL ^ E_WARNING);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
+// Hakee tietokannan tiedot erillisestä salatusta tiedostosta
+$initials=parse_ini_file(".ht.asetukset.ini");
+
 try{
-    //https://www.php.net/manual/en/function.mysqli-connect.php
-    $yhteys=mysqli_connect("localhost", "trtkp24_5", "xAsFu8yG", "trtkp24_5");
+    $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]);
+    //$yhteys=mysqli_connect("localhost", "trtkp24_5", "xAsFu8yG", "trtkp24_5");
 
     // Tarkista onko yhteys onnistunut
     if (mysqli_connect_errno()) {
@@ -42,5 +46,5 @@ if (!mysqli_stmt_execute($stmt)) {
 
 //ysqli_stmt_execute($stmt);
 
-header("Location:./lauratilaukset.html"); /*siirtyy halutulle sivulle*/
+header("Location:./kiitostilauksesta.html"); /*siirtyy halutulle sivulle*/
 ?>

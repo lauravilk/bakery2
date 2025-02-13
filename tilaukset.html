@@ -77,33 +77,33 @@
             </p>
         </div>    
 
-            <form action="/action_page.php">
-                <div class="form-container">
-                    <div class="form-group">
-                        <label for="fullname">Etunimi ja sukunimi:</label>
-                        <input type="text" id="fullname" name="fullname">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Osoite:</label>
-                        <input type="text" id="address" name="address">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Puhelinumero:</label>
-                        <input type="text" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Sähköposti:</label>
-                        <input type="text" id="email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="order">Tilauksen tiedot:</label>
-                        <textarea id="order" name="order"></textarea>
-                    </div> 
-                    <div class="form-group">
-                        <input type="submit" value="Lähetä">
-                    </div>        
-                </div>
-            </form>
+        <form action="tallennatilaukset.php" method="post">
+          <div class="form-container">
+              <div class="form-group">
+                  <label for="nimi">Etunimi ja sukunimi:</label>
+                  <input type="text" id="nimi" name="nimi">
+              </div>
+              <div class="form-group">
+                  <label for="osoite">Osoite:</label>
+                  <input type="text" id="osoite" name="osoite">
+              </div>
+              <div class="form-group">
+                  <label for="puhelin">Puhelinumero:</label>
+                  <input type="text" id="puhelin" name="puhelin">
+              </div>
+              <div class="form-group">
+                  <label for="sposti">Sähköposti:</label>
+                  <input type="text" id="sposti" name="sposti">
+              </div>
+              <div class="form-group">
+                  <label for="tilaus">Tilauksen tiedot:</label>
+                  <textarea id="tilaus" name="tilaus"></textarea>
+              </div> 
+              <div class="form-group">
+                  <input type="submit" value="Lähetä">
+              </div>        
+          </div>
+      </form>
     </main>
 
 
