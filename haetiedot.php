@@ -81,8 +81,8 @@ $tulos=mysqli_query($yhteys,"select * from tilaukset");
 
 while ($rivi=mysqli_fetch_object($tulos)){
     print "nimi=$rivi->nimi Osoite=$rivi->osoite puhelin=$rivi->puhelin sahkoposti=$rivi->sahkoposti tilaus=$rivi->tilaus". 
-    "<a href='./poista.php?id=$rivi->id'>Poista</a><br>".
-    "<a href='./muokkaa.php?id=$rivi->id'>muokkaa</a><br>";
+    "<a href='poista.php?id=$rivi->id'>Poista</a><br>".
+    "<a href='muokkaa.php?id=$rivi->id'>muokkaa</a><br>";
 
 }
 $ok=mysqli_close($yhteys);
