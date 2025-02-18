@@ -79,12 +79,13 @@ catch(Exception $e){
 
 $tulos=mysqli_query($yhteys,"select * from tilaukset");
 
+print "<ol>";
 while ($rivi=mysqli_fetch_object($tulos)){
-    print "nimi=$rivi->nimi Osoite=$rivi->osoite puhelin=$rivi->puhelin sahkoposti=$rivi->sahkoposti tilaus=$rivi->tilaus". 
-    "<a href='poista.php?id=$rivi->id'>Poista</a><br>".
-    "<a href='muokkaa.php?id=$rivi->id'>muokkaa</a><br>";
-
+    print "<li>nimi=$rivi->nimi Osoite=$rivi->osoite puhelin=$rivi->puhelin sahkoposti=$rivi->sposti tilaus=$rivi->tilaus". 
+    "<a href='./poista.php?poistettava=".$rivi->id."'>Poista</a><br>".
+    "<a href='./muokkaa.php?muokattava=".$rivi->id."'>Muokkaa</a><br>";
 }
+print "</ol>";
 $ok=mysqli_close($yhteys);
 ?>
 

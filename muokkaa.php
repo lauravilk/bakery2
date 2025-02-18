@@ -8,7 +8,7 @@ if (isset($_GET["muokattava"])) {
 }
 
 if (!isset($muokattava)) {
-    header("Location:poista.php");
+    header("Location:./tallennatilaukset.php");
     exit;
 }
 
