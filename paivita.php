@@ -25,7 +25,6 @@ if (!isset($nimi) || isset($osoite) || isset($puhelin) || isset($sahkoposti) || 
     exit;
 }
 
-
 try{
     $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]); 
   

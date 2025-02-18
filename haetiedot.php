@@ -60,15 +60,28 @@
         </div>
     </header>
 
-<?php
-// Hakee tietokannan tiedot erillisestä salatusta tiedostosta 
+    <main>
+        <!-- sisällö -->
+
+        <div class="tilausohjeet">
+            <div class="tekstit">
+                <h1>
+                  
+                Tilaukset
+              </h1>
+          </div>
+     </div>    
+ <?php
+ // TULOSTAA LOMAKKEEN TIEDOT
+
+// Hakee tietokannan tiedot erillisestä salatusta tiedostosta
 $initials=parse_ini_file(".ht.asetukset.ini"); 
 
 try{
   $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]); 
 
   //Tarkista onko yhteys onnistunut
-  if(mysqli_connect_errno()){
+  if (mysqli_connect_errno()){
     throw new Exception("Yhteysvirhe: " . mysqli_connect_error());
   }
 }
@@ -77,18 +90,41 @@ catch(Exception $e){
     exit;
 }
 
-$tulos=mysqli_query($yhteys,"select * from tilaukset");
+$tulos=mysqli_query($yhteys, "select * from tilaukset");
 
-print "<ol>";
-while ($rivi=mysqli_fetch_object($tulos)){
-    print "<li>nimi=$rivi->nimi Osoite=$rivi->osoite puhelin=$rivi->puhelin sahkoposti=$rivi->sposti tilaus=$rivi->tilaus". 
-    "<a href='./poista.php?poistettava=".$rivi->id."'>Poista</a><br>".
-    "<a href='./muokkaa.php?muokattava=".$rivi->id."'>Muokkaa</a><br>";
+print "<div class='container mt-4'>";
+print "<table class='table table-bordered'>";
+print "<thead class='table-light'>";
+print "<tr><th>Id</th><th>Nimi</th><th>Osoite</th><th>Puhelin</th><th>Sähköposti</th><th>Tiedot</th><th>Toiminnot</th></tr>";
+print "</thead>";
+print "<tbody>";
+
+while ($rivi = mysqli_fetch_object($tulos)) {
+  print "<tr>";
+  print "<td>{$rivi->id}</td>";
+  print "<td>{$rivi->nimi}</td>";
+  print "<td>{$rivi->osoite}</td>";
+  print "<td>{$rivi->puhelin}</td>";
+  print "<td>{$rivi->sposti}</td>";
+  print "<td>{$rivi->tilaus}</td>";
+  print "<td>
+      <a href='./poista.php?poistettava=".$rivi->id."'>Poista</a><br>
+      <a href='./muokkaa.php?muokattava=".$rivi->id."'>Muokkaa</a><br>
+        </td>";
+  print "</tr>";
 }
-print "</ol>";
-$ok=mysqli_close($yhteys);
-?>
 
+print "</tbody>";
+print "</table>";
+print "</div>";
+
+
+$ok=mysqli_close($yhteys);
+
+?>
+</main>
+
+<!---FOOTERI-->
 <footer>
     <div class="footer-container">
        <div class="Yhteystiedot">
