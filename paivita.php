@@ -1,30 +1,23 @@
 <?php
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
-//jos syötteet ovat olemassa
-if (isset($_POST["nimi"])){ 
-    $nimi=$_POST["nimi"];
-}
-if (isset($_POST["osoite"])){ 
-    $osoite=$_POST["osoite"];
-}
-if (isset($_POST["puhelin"])){ 
-    $puhelin=$_POST["puhelin"];
-}
-if (isset($_POST["sahkoposti"])){ 
-    $sahkoposti=$_POST["sahkoposti"];
-}
+//Tässä lomakkeessa käsitellään tietojen päivittämistä tietokannassa.
 
-if (isset($_POST["tilaus"])){ 
-    $tilaus=$_POST["tilaus"];
-}
+// Hakee tietokannan tiedot erillisestä salatusta tiedostosta 
+$initials=parse_ini_file(".ht.asetukset.ini"); 
 
-//Jos ei jompaa kumpaa tai kumpaakaan tietoa ole annettu
-//ohjataan pyyntö takaisin lomakkeelle. Tarkista ehtolause.
-if (!isset($nimi) || isset($osoite) || isset($puhelin) || isset($sahkoposti) || isset($tilaus)){
-    header("Location: poista.php");
+//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST jos syötteet ovat olemassa
+$id=isset($_POST["id"]) ? $_POST["id"] : "";
+$nimi=isset($_POST["nimi"]) ? $_POST["nimi"] : "";
+$osoite=isset($_POST["osoite"]) ? $_POST["osoite"] : "";
+$puhelin=isset($_POST["puhelin"]) ? $_POST["puhelin"] : "";
+$sahkoposti=isset($_POST["sposti"]) ? $_POST["sposti"] : "";
+$tilaus=isset($_POST["tilaus"]) ? $_POST["tilaus"] : 0;
+
+//Jos ei jompaa kumpaa tai kumpaakaan tietoa ole annettu ohjataan pyyntö takaisin lomakkeelle. Tarkista ehtolause.
+if (empty($id) || empty($nimi) || empty($osoite) || empty($puhelin) || empty($sahkoposti) || empty($tilaus)){
+    header("Location: haetiedot.php");
     exit;
 }
-
+//Yhteyden muodostaminen tietokantaan
 try{
     $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]); 
   
@@ -35,24 +28,17 @@ try{
   }
   catch(Exception $e){
       header("Location:../html/yhteysvirhe.html");
-      exit;
+      exit; //ja suoritus lopetetaan exit;-komennolla.
   }
 
-//Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
-//joihin laitetaan muuttujien arvoja
-$sql="update nimet set nimi=?, osoite=? puhelin=? sahkoposti=? tilaus=? where id=?";
+//Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat joihin laitetaan muuttujien arvoja.
+$sql="update tilaukset set nimi=?, osoite=?, puhelin=?, sposti=?, tilaus=? where id=?";
+$stmt=mysqli_prepare($yhteys, $sql);//Valmistellaan sql-lause
+mysqli_stmt_bind_param($stmt, 'sssssi', $nimi, $osoite, $puhelin, $sahkoposti,$tilaus,$id);//Sijoitetaan muuttujat oikeisiin paikkoihin
+mysqli_stmt_execute($stmt);//Suoritetaan sql-lause
+mysqli_close($yhteys);//Suljetaan tietokantayhteys
 
-//Valmistellaan sql-lause
-$stmt=mysqli_prepare($yhteys, $sql);
-//Sijoitetaan muuttujat oikeisiin paikkoihin
-mysqli_stmt_bind_param($stmt, 'sdi', $nimi, $osoite, $puhelin, $sahkoposti,$tilaus, $id);
-//Suoritetaan sql-lause
-mysqli_stmt_execute($stmt);
-//Suljetaan tietokantayhteys
-mysqli_close($yhteys);
-
-header("Location:./poista.php");
-exit;
+header("Location:./haetiedot.php");//Ohjaa käyttäjän toiseen sivuun tässä tapauksessa haetiedot.php.
 ?>
 
   

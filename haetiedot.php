@@ -58,67 +58,69 @@
               Hyvää makua sydämellä leivottuna
           </p>
         </div>
-    </header>
-
-    <main>
-        <!-- sisällö -->
-
-        <div class="tilausohjeet">
-            <div class="tekstit">
+</header>
+<main>
+<!-- sisällö -->
+    <div class="tilausohjeet">
+          <div class="tekstit">
                 <h1>
-                  
-                Tilaukset
-              </h1>
+                    Tilaukset
+                </h1>
           </div>
-     </div>    
- <?php
- // TULOSTAA LOMAKKEEN TIEDOT
+    </div>    
+<?php
+//Tässä PHP-lomake käsitellään tietokannasta haettujen tilaustietojen näyttämistä HTML-taulukossa.
 
 // Hakee tietokannan tiedot erillisestä salatusta tiedostosta
 $initials=parse_ini_file(".ht.asetukset.ini"); 
 
+//Yhteyden muodostaminen tietokantaan
 try{
   $yhteys=mysqli_connect($initials["databaseserver"], $initials["username"], $initials["password"], $initials["database"]); 
 
   //Tarkista onko yhteys onnistunut
-  if (mysqli_connect_errno()){
-    throw new Exception("Yhteysvirhe: " . mysqli_connect_error());
+  if (mysqli_connect_errno()){  //Tarkistaa,tapahtuiko virhe yhteyden muodostuksessa.
+    throw new Exception("Yhteysvirhe: " . mysqli_connect_error()); //Jos virhe tapahtuu, heitetään "Exception" joka keskeyttää suorituksen.
   }
 }
 catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
-    exit;
+    header("Location:../html/yhteysvirhe.html");//Jos virhe havaitaan, käyttäjä ohjataan sivulle "/html/yhteysvirhe.html" 
+    exit; //ja suoritus lopetetaan exit;-komennolla.
 }
-
+//"mysqli_query()" suorittaa SQL-kyselyn. Tässä haetaan kaikki tiedot tilaukset-taulusta ja tullos tallennetaan.
 $tulos=mysqli_query($yhteys, "select * from tilaukset");
+//Tulostetaan HTML-rakenne
+  print "<div class='container mt-4'>"; //div-elementti Bootstrap-luokilla esim. container mt-4 lisää marginaalia.
+  print "<table class='table table-bordered'>";//table-elementti, jossa on reunat "table-bordered".
+  print "<thead class='table-light'>";//thead sisältää taulukon otsikkorivin.
+  print "<tr><th>Id</th><th>Nimi</th><th>Osoite</th><th>Puhelin</th><th>Sähköposti</th><th>Tiedot</th><th>Toiminnot</th></tr>";
+  print "</thead>";
+  print "<tbody>";
 
-print "<div class='container mt-4'>";
-print "<table class='table table-bordered'>";
-print "<thead class='table-light'>";
-print "<tr><th>Id</th><th>Nimi</th><th>Osoite</th><th>Puhelin</th><th>Sähköposti</th><th>Tiedot</th><th>Toiminnot</th></tr>";
-print "</thead>";
-print "<tbody>";
-
-while ($rivi = mysqli_fetch_object($tulos)) {
-  print "<tr>";
+//Taulukon rivien täyttäminen tietokannasta
+while ($rivi = mysqli_fetch_object($tulos)) { //"mysqli_fetch_object()" hakee tulosjoukosta rivin oliomuodossa
+  print "<tr>"; //Jokaiselle riville luodaan <tr> (table row) -elementti ja täytetään sarakkeet tietokannan tiedoilla
   print "<td>{$rivi->id}</td>";
   print "<td>{$rivi->nimi}</td>";
   print "<td>{$rivi->osoite}</td>";
   print "<td>{$rivi->puhelin}</td>";
   print "<td>{$rivi->sposti}</td>";
   print "<td>{$rivi->tilaus}</td>";
-  print "<td>
+  print "<td>     
       <a href='./poista.php?poistettava=".$rivi->id."'>Poista</a><br>
       <a href='./muokkaa.php?muokattava=".$rivi->id."'>Muokkaa</a><br>
         </td>";
   print "</tr>";
+  //Toimintolinkkit.
+  //Poista-linkki, joka ohjaa poista.php-sivulle, välittäen poistettavan rivin ID:n.
+  //Muokkaa-linkki, joka ohjaa muokkaa.php-sivulle, välittäen muokattavan rivin ID:n.
 }
+//HTML-rakenteen päättäminen.
+  print "</tbody>";
+  print "</table>";
+  print "</div>";
 
-print "</tbody>";
-print "</table>";
-print "</div>";
-
-
+//sulkee tietokantayhteyden.
 $ok=mysqli_close($yhteys);
 
 ?>
@@ -169,3 +171,27 @@ $ok=mysqli_close($yhteys);
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
